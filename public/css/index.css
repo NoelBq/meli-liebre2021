@@ -154,6 +154,12 @@ main {
 		display: initial;
 	}
 
+	.article i .truck-icon:hover {
+		transform: rotate(180deg);
+	}
+
+	
+
 	.product-list {
 		order:2;
 	}

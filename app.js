@@ -1,15 +1,23 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const path = require('path');
 
-const staticFolder = path.resolve(__dirname, './public');
+
+const staticFolder = path.resolve(__dirname, 'public');
 app.use(express.static(staticFolder));
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, "./views/home.html"))
+     res.sendFile(path.resolve(__dirname, "./views/home.html"))
 })
 
-app.listen(PORT, () => {
-    console.log('server running')
+app.get('/register', (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/register.html"))
+})
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./views/login.html"))
+})
+
+app.listen(process.env.PORT || 3800, () => {
+    console.log('Server Running')
 })
