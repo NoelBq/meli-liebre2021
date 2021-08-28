@@ -50,7 +50,9 @@ header {
 }
 
 .search form {
-	display: flex
+	display: flex;
+	width: 100%;
+	
 }
 
 .search input {
